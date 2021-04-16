@@ -1,0 +1,9 @@
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\Eugenia Peronace\source\repos\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.pdb
