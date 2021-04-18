@@ -48,11 +48,23 @@ namespace Entidades
 
         private bool EsBinario(string binario)
         {
+            bool retorno = true;   //recorro los caracteres del string llamado binario y si                                      encuentro un caracter distinto a 1 o 0, devuelvo false.  
 
+            for (int i = 0; i < binario.Length; i++)
+            {
+                if (binario.ToCharArray()[i] != '0' && binario.ToCharArray()[i] != '1')
+                {
+                    retorno = false;
+                    break;
+                }
+            }
+            return retorno;
         }
+
         public string BinarioDecimal(string binario)
         {
 
+            
         }
 
         public string DecimalBinario(double decimal) 
@@ -62,6 +74,37 @@ namespace Entidades
         public string DecimalBinario(string decimal)
         {
 
+        }
+
+        public static double operator -(Numero n1, Numero n2)
+        {
+            double resultado = n1.numero - n2.numero;
+            return resultado;
+        }
+
+        public static double operator *(Numero n1, Numero n2)
+        {
+            double resultado = n1.numero * n2.numero;
+            return resultado;
+        }
+
+        public static double operator /(Numero n1, Numero n2)
+        {
+            double resultado;
+
+            if (n2.numero == 0)
+                resultado = double.MinValue;
+            
+            else
+                resultado = n1 / n2;
+            
+            return resultado;
+        }
+
+        public static double operator +(Numero n1, Numero n2)
+        {
+            double resultado = n1 + n2;
+            return resultado;
         }
 
     }
