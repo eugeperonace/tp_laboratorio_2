@@ -10,35 +10,46 @@ namespace Entidades
     {
         private double numero;
 
-        Numero()
+        public Numero()
         {
             this.numero = 0;
         }
 
-        Numero(double numero)
+        public Numero(double numero)
         {
             this.numero = numero;
         }
 
-        Numero(string numero)
+        public Numero(string strNumero)
         {
-
+            this.numero = double.Parse(strNumero);
         }
 
         public double ValidarNumero(string strNumero)
         {
-            double retorno;
-            retorno = 0;
+            double numero, retorno;
 
+            if (double.TryParse(strNumero, out numero))
+            {
+                retorno = numero;
+            }
+            else
+            {
+                retorno = 0;
+            }
             return retorno;
         }
 
         public string SetNumero
         {
             //previa validación con método ValidarNumero
-            set { }
+            set { numero = ValidarNumero(value); }
         }
 
+        private bool EsBinario(string binario)
+        {
+
+        }
         public string BinarioDecimal(string binario)
         {
 
@@ -53,9 +64,5 @@ namespace Entidades
 
         }
 
-        private bool EsBinario(string binario)
-        {
-
-        }
     }
 }
