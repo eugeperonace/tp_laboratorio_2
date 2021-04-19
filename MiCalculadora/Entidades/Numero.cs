@@ -10,21 +10,37 @@ namespace Entidades
     {
         private double numero;
 
+        /// <summary>
+        /// Constructor que inicializa el atributo "numero" con 0.
+        /// </summary>
         public Numero()
         {
             this.numero = 0;
         }
 
+        /// <summary>
+        /// Constructor que recibe un numero en formato double e inicializa al atributo numero de la class Numero.
+        /// </summary>
+        /// <param name="numero"></param>
         public Numero(double numero)
         {
             this.numero = numero;
         }
 
+        /// <summary>
+        /// Constructor que recibe un numero en formato string e inicializa al atributo numero de la class Numero.
+        /// </summary>
+        /// <param name="strNumero"></param>
         public Numero(string strNumero)
         {
             this.SetNumero = strNumero;
         }
 
+        /// <summary>
+        /// Valida que el string ingresado sea un numero
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns></returns> devuelve el numero validado en formato double, si no retorna 0.
         public double ValidarNumero(string strNumero)
         {
             double numero, retorno;
@@ -40,15 +56,18 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Es una propiedad que setea el numero recibido por parámetro al atributo número.
+        /// </summary>
         public string SetNumero
         {
             //previa validación con método ValidarNumero
-            set { numero = ValidarNumero(value); }
+            set { this.numero = ValidarNumero(value); }
         }
 
         private bool EsBinario(string binario)
         {
-            bool retorno = true;   //recorro los caracteres del string llamado binario y si encuentro un caracter distinto a 1 o 0, devuelvo false.  
+            bool retorno = true; //recorro los caracteres del string llamado binario y si encuentro un caracter distinto a 1 o 0, devuelvo false.  
 
             for (int i = 0; i < binario.Length; i++)
             {
@@ -61,28 +80,39 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Convierte un numero binario, recibido en formato string, a decimal.
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns> devuelve el numero convertido a decimal, en formato string.
         public string BinarioDecimal(string binario)
         {
             int resto = 0, exponente = 0, resultado = 0;
 
             if (EsBinario(binario))
             {
-                int numero = int.Parse(binario);
+                int numero = Convert.ToInt32(binario); //int.Parse(binario);
                 do
                 {
-                    resto = numero % 10; //guardo en la variable el resto entre el numero ingresado y 10111
+                    resto = numero % 10; //guardo en la variable el resto entre el numero ingresado y 10
                     numero = numero / 10;
                     resultado += (int)(resto * Math.Pow(2, exponente)); //resultado es igual al resto multiplicado por 2 elevado al exponente 
                     exponente++; //incremento el exponente (el cual inicia en cero)
-                }while (numero > 0);
+                } while (numero > 0);
             }
             else
             {
                 Console.WriteLine("Valor inválido.\n");
             }
             return resultado.ToString();
+
         }
 
+        /// <summary>
+        /// Convierte un numero decimal, recibido en formato double, a binario.
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns> devuelve el numero convertido a binario, en formato string.
         public string DecimalBinario(double numero) 
         {
             string retorno;
@@ -94,9 +124,14 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Convierte un numero decimal, recibido en formato string, a binario.
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns> devuelve el numero convertido a binario, en formato string.
         public string DecimalBinario(string numero)
         {
-            int numeroDecimal = int.Parse(numero);
+            int numeroDecimal = Convert.ToInt32(numero);
             string binario = " ";
 
             if (numeroDecimal <= 0)
@@ -116,18 +151,36 @@ namespace Entidades
             return binario.ToString();
         }
 
+        /// <summary>
+        /// Sobrecarga de operador "-". Realiza la resta entre los numeros pasados por parámetro.
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns> devuelve el resultado obtenido.
         public static double operator -(Numero n1, Numero n2)
         {
             double resultado = n1.numero - n2.numero;
             return resultado;
         }
 
+        /// <summary>
+        /// Sobrecarga de operador "*". Realiza la multiplicacion entre los numeros pasados por parámetro.
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns> devuelve el resultado obtenido.
         public static double operator *(Numero n1, Numero n2)
         {
             double resultado = n1.numero * n2.numero;
             return resultado;
         }
 
+        /// <summary>
+        /// Sobrecarga de operador "/". Realiza la división entre los numeros pasados por parámetro.
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns> devuelve el resultado obtenido.
         public static double operator /(Numero n1, Numero n2)
         {
             double resultado;
@@ -136,14 +189,21 @@ namespace Entidades
                 resultado = double.MinValue;
             
             else
-                resultado = n1 / n2;
+                resultado = n1.numero / n2.numero;
             
             return resultado;
         }
 
+        /// <summary>
+        /// Sobrecarga de operador "+". Realiza la suma entre los numeros pasados por parámetro.
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns> devuelve el resultado obtenido.
         public static double operator +(Numero n1, Numero n2)
         {
-            double resultado = n1 + n2;
+            double resultado = 0;
+            resultado = n1.numero + n2.numero;
             return resultado;
         }
     }

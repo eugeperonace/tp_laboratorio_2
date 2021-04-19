@@ -1,0 +1,6 @@
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\bin\Debug\Entidades.dll
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\obj\Debug\Entidades.dll
+C:\Users\Eugenia Peronace\Desktop\tp_laboratorio_2\MiCalculadora\Entidades\obj\Debug\Entidades.pdb
