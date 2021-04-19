@@ -23,7 +23,7 @@ namespace MiCalculadora
         }
 
         /// <summary>
-        /// 
+        /// Evento que se ejecuta cuando el usuario hace click en el botón Operar. Reazlia la operacion correspondiente entre los números colocados en el formulario.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
