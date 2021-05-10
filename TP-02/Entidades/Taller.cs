@@ -20,11 +20,18 @@ namespace Entidades
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Constructor de Taller.
+        /// </summary>
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
 
+        /// <summary>
+        /// Constructor de Taller que recibe un parámetro que indica el espacio que tiene disponible.
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Taller(int espacioDisponible)
             : this()
         {
@@ -34,9 +41,9 @@ namespace Entidades
 
         #region "Sobrecargas"
         /// <summary>
-        /// Muestro el estacionamiento y TODOS los vehículos
+        /// Muestro el taller y TODOS los vehículos
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna un string con todos los vehículos del taller.</returns>
         public override string ToString()
         {
             return Listar(this, ETipo.Todos);

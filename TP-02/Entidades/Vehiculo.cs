@@ -25,6 +25,12 @@ namespace Entidades
             Chico, Mediano, Grande
         }
 
+        /// <summary>
+        /// Constructor de Vehículo.
+        /// </summary>
+        /// <param name="chasis"></param>
+        /// <param name="marca"></param>
+        /// <param name="color"></param>
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
@@ -65,9 +71,9 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <param name="v1">Vehículo a comparar con el vehículo v2.</param>
+        /// <param name="v2">Vehículo a comparar con el vehículo v1.</param>
+        /// <returns>Retorna true si los chasis son iguales y False si son distintos.</returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
             return (v1.chasis == v2.chasis);
@@ -76,9 +82,9 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <param name="v1">Vehículo a comparar con el vehículo v2.</param>
+        /// <param name="v2">Vehículo a comparar con el vehículo v1.</param>
+        /// <returns>Retorna true si los chasis son distintos y False si son iguales.</returns> 
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
             return !(v1.chasis == v2.chasis);

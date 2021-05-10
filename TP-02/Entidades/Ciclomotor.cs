@@ -8,6 +8,12 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
+        /// <summary>
+        /// Constructor de un Ciclomotor.
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) 
             : base(chasis, marca, color)
         {
@@ -27,7 +33,7 @@ namespace Entidades
         /// <summary>
         /// Muestra los datos de un vehículo Ciclomotor.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna un string con los datos del vehículo Ciclomotor.</returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

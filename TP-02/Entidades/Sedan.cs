@@ -27,7 +27,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Constructor de un vehículo Sedan con el tipo de puertas.
+        /// Constructor de un Sedan con el tipo de puertas.
         /// </summary>
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
@@ -53,7 +53,7 @@ namespace Entidades
         /// <summary>
         /// Muestra los datos de un vehículo Sedan.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna un string con los datos del vehículo Sedan.</returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
