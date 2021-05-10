@@ -26,6 +26,13 @@ namespace Entidades
             this.tipo = ETipo.CuatroPuertas;
         }
 
+        /// <summary>
+        /// Constructor de un vehículo Sedan con el tipo de puertas.
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        /// <param name="tipo"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
          : this(marca, chasis, color)
         {
@@ -43,13 +50,17 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de un vehículo Sedan.
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
             sb.AppendLine(base.Mostrar());
-            sb.AppendFormat("TAMAÑO : {0} : {1}", this.Tamanio, this.tipo);
+            sb.AppendFormat("TAMAÑO : {0}TIPO {1}\n", this.Tamanio, this.tipo);
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 

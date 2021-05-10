@@ -24,6 +24,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de un vehículo Suv.
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

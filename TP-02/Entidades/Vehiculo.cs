@@ -46,6 +46,10 @@ namespace Entidades
             return (string)this;
         }
 
+        /// <summary>
+        /// Conversión explícita de un objeto de tipo Vehiculo a string. Muestra los atributos de un vehículo.
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();

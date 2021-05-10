@@ -49,7 +49,7 @@ namespace Entidades
         /// Expone los datos del elemento y su lista (incluidas sus herencias)
         /// SOLO del tipo requerido
         /// </summary>
-        /// <param name="t">Elemento a exponer</param>
+        /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
         public static string Listar(Taller taller, ETipo tipo)
